@@ -1,0 +1,7 @@
+{
+  "name": "AlyOneShop - Jasa Sablon Kaos Custom",
+  "description": "Website profesional untuk AlyOneShop, penyedia jasa sablon kaos custom berkualitas untuk satuan, lusinan, dan partai besar.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
