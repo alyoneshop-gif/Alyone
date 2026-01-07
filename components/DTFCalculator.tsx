@@ -49,7 +49,7 @@ interface DesignState {
 const DTFCalculator: React.FC = () => {
   const [mode, setMode] = useState<'single' | 'double'>('single');
   const [quantity, setQuantity] = useState<number>(1);
-  
+
   const [design1, setDesign1] = useState<DesignState>({ id: 1, image: null, pixelDims: null, widthCm: '', heightCm: '' });
   const [design2, setDesign2] = useState<DesignState>({ id: 2, image: null, pixelDims: null, widthCm: '', heightCm: '' });
 
@@ -60,7 +60,7 @@ const DTFCalculator: React.FC = () => {
   const calculatePrice = (width: number, height: number, qty: number, pricingTable: typeof MAIN_PRICING_TIERS) => {
     const area = width * height;
     const tier = pricingTable.find(t => area <= t.maxArea);
-    
+
     let unitPrice = 0;
     if (tier) {
       if (qty >= 50) unitPrice = tier.prices[50];
@@ -121,12 +121,12 @@ const DTFCalculator: React.FC = () => {
         }
 
         // Hitung Final Price sesuai peran
-        const res1_final = d1Type === 'Utama' 
-          ? res1_base 
+        const res1_final = d1Type === 'Utama'
+          ? res1_base
           : calculatePrice(w1, h1, quantity, ADDITIONAL_PRICING_TIERS); // Gunakan tabel Tambahan
-        
-        const res2_final = d2Type === 'Utama' 
-          ? res2_base 
+
+        const res2_final = d2Type === 'Utama'
+          ? res2_base
           : calculatePrice(w2, h2, quantity, ADDITIONAL_PRICING_TIERS); // Gunakan tabel Tambahan
 
         setDesign1(prev => ({
@@ -223,7 +223,7 @@ const DTFCalculator: React.FC = () => {
 
       {/* Image Upload Area */}
       <div className="mb-6">
-        <div 
+        <div
           onClick={() => inputRef.current?.click()}
           className={`relative border-2 border-dashed rounded-2xl p-4 flex flex-col items-center justify-center cursor-pointer transition-all h-48 ${design.image ? 'border-blue-400 bg-white' : 'border-slate-300 hover:border-blue-400 hover:bg-white'}`}
         >
@@ -242,11 +242,11 @@ const DTFCalculator: React.FC = () => {
               <p className="text-slate-500 text-xs font-medium text-center">Upload Gambar</p>
             </>
           )}
-          <input 
-            type="file" 
-            ref={inputRef} 
-            className="hidden" 
-            accept="image/*" 
+          <input
+            type="file"
+            ref={inputRef}
+            className="hidden"
+            accept="image/*"
             onChange={(e) => handleImageUpload(e, designNo)}
           />
         </div>
@@ -287,7 +287,7 @@ const DTFCalculator: React.FC = () => {
     <section id="dtf-calculator" className="py-24 bg-white border-t border-slate-100">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid xl:grid-cols-12 gap-12 items-start">
-          
+
           {/* Left Column: Input Area */}
           <div className="xl:col-span-7">
             <div className="mb-8">
@@ -298,30 +298,30 @@ const DTFCalculator: React.FC = () => {
 
             {/* Controls */}
             <div className="bg-white rounded-3xl shadow-lg border border-slate-100 p-2 mb-8 inline-flex items-center gap-2">
-               <button 
-                  onClick={() => { setMode('single'); setDesign2(prev => ({...prev, image: null, result: null})); }}
-                  className={`px-6 py-3 rounded-2xl font-bold text-sm transition-all flex items-center gap-2 ${mode === 'single' ? 'bg-blue-600 text-white shadow-md' : 'text-slate-500 hover:bg-slate-50'}`}
-               >
-                 <ImageIcon size={18} /> 1 Desain
-               </button>
-               <button 
-                  onClick={() => setMode('double')}
-                  className={`px-6 py-3 rounded-2xl font-bold text-sm transition-all flex items-center gap-2 ${mode === 'double' ? 'bg-blue-600 text-white shadow-md' : 'text-slate-500 hover:bg-slate-50'}`}
-               >
-                 <ArrowRightLeft size={18} /> 2 Desain
-               </button>
+              <button
+                onClick={() => { setMode('single'); setDesign2(prev => ({ ...prev, image: null, result: null })); }}
+                className={`px-6 py-3 rounded-2xl font-bold text-sm transition-all flex items-center gap-2 ${mode === 'single' ? 'bg-blue-600 text-white shadow-md' : 'text-slate-500 hover:bg-slate-50'}`}
+              >
+                <ImageIcon size={18} /> 1 Desain
+              </button>
+              <button
+                onClick={() => setMode('double')}
+                className={`px-6 py-3 rounded-2xl font-bold text-sm transition-all flex items-center gap-2 ${mode === 'double' ? 'bg-blue-600 text-white shadow-md' : 'text-slate-500 hover:bg-slate-50'}`}
+              >
+                <ArrowRightLeft size={18} /> 2 Desain
+              </button>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               {renderDesignInput(design1, fileInputRef1, 1)}
-              
+
               {mode === 'double' ? (
                 renderDesignInput(design2, fileInputRef2, 2)
               ) : (
                 <div className="hidden md:flex flex-col items-center justify-center p-6 rounded-[2rem] border-2 border-dashed border-slate-100 text-slate-300 bg-slate-50/50">
-                   <Plus size={48} className="mb-2" />
-                   <p className="font-bold">Tambah Desain Ke-2</p>
-                   <button onClick={() => setMode('double')} className="mt-4 px-4 py-2 bg-white text-blue-600 rounded-full text-sm font-bold shadow-sm border border-slate-200 hover:border-blue-400">Aktifkan Mode 2 Desain</button>
+                  <Plus size={48} className="mb-2" />
+                  <p className="font-bold">Tambah Desain Ke-2</p>
+                  <button onClick={() => setMode('double')} className="mt-4 px-4 py-2 bg-white text-blue-600 rounded-full text-sm font-bold shadow-sm border border-slate-200 hover:border-blue-400">Aktifkan Mode 2 Desain</button>
                 </div>
               )}
             </div>
@@ -329,8 +329,8 @@ const DTFCalculator: React.FC = () => {
             {/* Quantity Input Global */}
             <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4">
               <div>
-                 <h5 className="font-bold text-slate-800">Jumlah Pesanan (Pcs)</h5>
-                 <p className="text-xs text-slate-500">Jumlah kaos/media yang akan disablon</p>
+                <h5 className="font-bold text-slate-800">Jumlah Pesanan (Pcs)</h5>
+                <p className="text-xs text-slate-500">Jumlah kaos/media yang akan disablon</p>
               </div>
               <div className="flex items-center gap-4">
                 <button onClick={() => setQuantity(Math.max(1, quantity - 1))} className="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center font-bold text-slate-600 hover:bg-slate-100 hover:shadow-md transition-all">-</button>
@@ -349,7 +349,7 @@ const DTFCalculator: React.FC = () => {
           <div className="xl:col-span-5 xl:sticky xl:top-32">
             <div className="bg-slate-900 text-white rounded-[2.5rem] p-8 shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600 rounded-full -mr-20 -mt-20 blur-3xl opacity-20"></div>
-              
+
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-8">
                   <div className="p-3 bg-white/10 rounded-xl backdrop-blur-md">
@@ -361,16 +361,16 @@ const DTFCalculator: React.FC = () => {
                 {!isReady ? (
                   <div className="text-center py-12 text-slate-400 border-2 border-dashed border-white/10 rounded-2xl">
                     <ImageIcon size={48} className="mx-auto mb-4 opacity-50" />
-                    <p>Lengkapi data desain & ukuran<br/>untuk melihat estimasi harga.</p>
+                    <p>Lengkapi data desain & ukuran<br />untuk melihat estimasi harga.</p>
                   </div>
                 ) : (
                   <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                    
+
                     {/* Design 1 Detail */}
                     <div className="bg-white/5 rounded-2xl p-4 border border-white/10 relative overflow-hidden">
                       {design1.result?.type === 'Utama' && <div className="absolute top-0 right-0 bg-blue-600 text-xs font-bold px-3 py-1 rounded-bl-xl">HARGA UTAMA</div>}
                       {design1.result?.type === 'Tambahan' && <div className="absolute top-0 right-0 bg-green-500 text-xs font-bold px-3 py-1 rounded-bl-xl">HARGA TAMBAHAN</div>}
-                      
+
                       <h5 className="font-bold text-blue-200 mb-2 text-sm">Desain 1</h5>
                       <div className="flex justify-between text-xs mb-1">
                         <span className="text-slate-400">{design1.result?.area} cm² ({design1.result?.tierLabel})</span>
@@ -384,10 +384,10 @@ const DTFCalculator: React.FC = () => {
 
                     {/* Design 2 Detail */}
                     {mode === 'double' && design2.result && (
-                       <div className="bg-white/5 rounded-2xl p-4 border border-white/10 relative overflow-hidden">
+                      <div className="bg-white/5 rounded-2xl p-4 border border-white/10 relative overflow-hidden">
                         {design2.result?.type === 'Utama' && <div className="absolute top-0 right-0 bg-blue-600 text-xs font-bold px-3 py-1 rounded-bl-xl">HARGA UTAMA</div>}
                         {design2.result?.type === 'Tambahan' && <div className="absolute top-0 right-0 bg-green-500 text-xs font-bold px-3 py-1 rounded-bl-xl">HARGA TAMBAHAN</div>}
-                        
+
                         <h5 className="font-bold text-blue-200 mb-2 text-sm">Desain 2</h5>
                         <div className="flex justify-between text-xs mb-1">
                           <span className="text-slate-400">{design2.result?.area} cm² ({design2.result?.tierLabel})</span>
@@ -411,34 +411,34 @@ const DTFCalculator: React.FC = () => {
 
                     {/* Construct WhatsApp Message */}
                     {(() => {
-                        let msg = `Halo AlyOneShop, saya cek kalkulator untuk pesanan: %0A%0A`;
-                        msg += `*Jumlah:* ${quantity} pcs%0A`;
+                      let msg = `Halo AlyOneShop, saya cek kalkulator untuk pesanan: %0A%0A`;
+                      msg += `*Jumlah:* ${quantity} pcs%0A`;
+                      msg += `------------------%0A`;
+                      msg += `*Desain 1:* ${design1.widthCm}x${design1.heightCm}cm (${design1.result?.tierLabel})%0A`;
+                      msg += `Harga: ${formatRupiah(design1.result?.subtotal || 0)} (${design1.result?.type})%0A`;
+                      if (mode === 'double' && design2.result) {
                         msg += `------------------%0A`;
-                        msg += `*Desain 1:* ${design1.widthCm}x${design1.heightCm}cm (${design1.result?.tierLabel})%0A`;
-                        msg += `Harga: ${formatRupiah(design1.result?.subtotal || 0)} (${design1.result?.type})%0A`;
-                        if (mode === 'double' && design2.result) {
-                           msg += `------------------%0A`;
-                           msg += `*Desain 2:* ${design2.widthCm}x${design2.heightCm}cm (${design2.result?.tierLabel})%0A`;
-                           msg += `Harga: ${formatRupiah(design2.result?.subtotal || 0)} (${design2.result?.type})%0A`;
-                        }
-                        msg += `==================%0A`;
-                        msg += `*TOTAL ESTIMASI: ${formatRupiah(totalPrice)}*`;
-                        
-                        return (
-                          <a 
-                            href={`https://wa.me/6281234567890?text=${msg}`}
-                            target="_blank"
-                            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-900/50 mt-4 group"
-                          >
-                            Pesan Sekarang <ArrowRightLeft size={16} className="group-hover:translate-x-1 transition-transform" />
-                          </a>
-                        );
+                        msg += `*Desain 2:* ${design2.widthCm}x${design2.heightCm}cm (${design2.result?.tierLabel})%0A`;
+                        msg += `Harga: ${formatRupiah(design2.result?.subtotal || 0)} (${design2.result?.type})%0A`;
+                      }
+                      msg += `==================%0A`;
+                      msg += `*TOTAL ESTIMASI: ${formatRupiah(totalPrice)}*`;
+
+                      return (
+                        <a
+                          href={`https://wa.me/6282223703140?text=${msg}`}
+                          target="_blank"
+                          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-900/50 mt-4 group"
+                        >
+                          Pesan Sekarang <ArrowRightLeft size={16} className="group-hover:translate-x-1 transition-transform" />
+                        </a>
+                      );
                     })()}
                   </div>
                 )}
               </div>
             </div>
-            
+
             <p className="text-xs text-slate-500 mt-6 text-center italic max-w-sm mx-auto">
               *Harga di atas adalah estimasi jasa sablon DTF. Belum termasuk kaos.
             </p>

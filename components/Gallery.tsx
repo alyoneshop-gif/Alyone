@@ -9,12 +9,12 @@ const Gallery: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
 
   const categories = [
-    'Semua', 
-    'DTF', 
-    'Plastisol Reguler', 
-    'Plastisol Flock', 
-    'Plastisol Metallic', 
-    'Plastisol Reflective', 
+    'Semua',
+    'DTF',
+    'Plastisol Reguler',
+    'Plastisol Flock',
+    'Plastisol Metallic',
+    'Plastisol Reflective',
     'Plastisol Glow'
   ];
 
@@ -48,11 +48,10 @@ const Gallery: React.FC = () => {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-5 py-2 rounded-xl text-sm font-bold transition-all duration-300 border ${
-                filter === cat 
-                ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-200' 
-                : 'bg-white border-slate-200 text-slate-600 hover:border-blue-600 hover:text-blue-600'
-              }`}
+              className={`px-5 py-2 rounded-xl text-sm font-bold transition-all duration-300 border ${filter === cat
+                  ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-200'
+                  : 'bg-white border-slate-200 text-slate-600 hover:border-blue-600 hover:text-blue-600'
+                }`}
             >
               {cat}
             </button>
@@ -62,8 +61,8 @@ const Gallery: React.FC = () => {
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredItems.map((item) => (
-            <div 
-              key={item.id} 
+            <div
+              key={item.id}
               onClick={() => openItem(item)}
               className="group relative aspect-square overflow-hidden rounded-3xl bg-slate-100 animate-in fade-in zoom-in duration-500 cursor-pointer shadow-sm hover:shadow-xl transition-all"
             >
@@ -79,7 +78,7 @@ const Gallery: React.FC = () => {
             </div>
           ))}
         </div>
-        
+
         {filteredItems.length === 0 && (
           <div className="py-20 text-center text-slate-400">
             <p className="text-lg">Belum ada item untuk kategori ini.</p>
@@ -91,35 +90,35 @@ const Gallery: React.FC = () => {
           <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
             <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-md transition-opacity" onClick={closeItem}></div>
             <div className="relative bg-white w-full max-w-4xl rounded-[2.5rem] overflow-hidden shadow-2xl animate-in zoom-in duration-300">
-              <button 
+              <button
                 onClick={closeItem}
                 className="absolute top-6 right-6 z-20 p-2 bg-white/80 backdrop-blur rounded-full text-slate-800 hover:bg-white transition-colors shadow-lg"
               >
                 <X size={24} />
               </button>
-              
+
               <div className="flex flex-col md:flex-row max-h-[90vh]">
                 {/* Image Area */}
                 <div className="md:w-3/5 bg-slate-100 overflow-hidden">
-                  <img 
-                    src={selectedItem.image} 
-                    alt={selectedItem.title} 
+                  <img
+                    src={selectedItem.image}
+                    alt={selectedItem.title}
                     className="w-full h-full object-cover aspect-square md:aspect-auto"
                   />
                 </div>
-                
+
                 {/* Info Area */}
                 <div className="md:w-2/5 p-8 md:p-12 flex flex-col justify-center">
                   <span className="text-blue-600 font-bold uppercase tracking-[0.2em] text-xs mb-3">{selectedItem.category}</span>
                   <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-6 leading-tight">{selectedItem.title}</h3>
                   <div className="w-12 h-1 bg-blue-600 rounded-full mb-8"></div>
-                  
+
                   <p className="text-slate-500 mb-10 leading-relaxed text-sm md:text-base">
                     Hasil produksi nyata menggunakan teknik {selectedItem.category}. Kami menjamin ketajaman warna dan daya tahan sablon yang tinggi untuk setiap pesanan Anda.
                   </p>
-                  
-                  <a 
-                    href={`https://wa.me/6281234567890?text=Halo AlyOneShop, saya tertarik dengan hasil sablon ${selectedItem.title} (${selectedItem.category})`}
+
+                  <a
+                    href={`https://wa.me/6282223703140?text=Halo AlyOneShop, saya tertarik dengan hasil sablon ${selectedItem.title} (${selectedItem.category})`}
                     target="_blank"
                     className="inline-flex items-center justify-center gap-3 bg-blue-600 text-white py-4 rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-100 group"
                   >
