@@ -181,21 +181,18 @@ export const GALLERY_ITEMS: GalleryItem[] = [
 ];
 
 export const CLIENT_LOGOS: ClientLogo[] = [
-  { id: 1, name: 'Brand 1', url: 'https://logo.clearbit.com/nike.com' },
-  { id: 2, name: 'Brand 2', url: 'https://logo.clearbit.com/adidas.com' },
-  { id: 3, name: 'Brand 3', url: 'https://logo.clearbit.com/spotify.com' },
-  { id: 4, name: 'Brand 4', url: 'https://logo.clearbit.com/starbucks.com' },
-  { id: 5, name: 'Brand 5', url: 'https://logo.clearbit.com/apple.com' },
-  { id: 6, name: 'Brand 6', url: 'https://logo.clearbit.com/microsoft.com' },
-  { id: 7, name: 'Brand 7', url: 'https://logo.clearbit.com/google.com' },
-  { id: 8, name: 'Brand 8', url: 'https://logo.clearbit.com/amazon.com' },
-  { id: 9, name: 'Brand 9', url: 'https://logo.clearbit.com/netflix.com' },
-  { id: 10, name: 'Brand 10', url: 'https://logo.clearbit.com/airbnb.com' },
-  { id: 11, name: 'Brand 11', url: 'https://logo.clearbit.com/uber.com' },
-  { id: 12, name: 'Brand 12', url: 'https://logo.clearbit.com/grab.com' },
-  { id: 13, name: 'Brand 13', url: 'https://logo.clearbit.com/gojek.com' },
-  { id: 14, name: 'Brand 14', url: 'https://logo.clearbit.com/tokopedia.com' },
-  { id: 15, name: 'Brand 15', url: 'https://logo.clearbit.com/shopee.com' },
+  { id: 1, name: 'Brand 1', url: 'https://images.seeklogo.com/logo-png/1/1/bank-mandiri-logo-png_seeklogo-16290.png' },
+  { id: 2, name: 'Brand 2', url: 'https://images.seeklogo.com/logo-png/35/1/bank-bni-logo-png_seeklogo-355606.png' },
+  { id: 3, name: 'Brand 3', url: 'https://images.seeklogo.com/logo-png/30/1/bank-bri-bank-rakyat-logo-png_seeklogo-304232.png' },
+  { id: 4, name: 'Brand 4', url: 'https://images.seeklogo.com/logo-png/35/1/pu-logo-png_seeklogo-355609.png' },
+  { id: 5, name: 'Brand 5', url: 'https://images.seeklogo.com/logo-png/20/2/universitas-gadjah-mada-logo-png_seeklogo-209146.png' },
+  { id: 6, name: 'Brand 6', url: 'https://images.seeklogo.com/logo-png/20/2/universitas-ahmad-dahlan-yogyakarta-logo-png_seeklogo-203811.png' },
+  { id: 7, name: 'Brand 7', url: 'https://images.seeklogo.com/logo-png/23/2/universitas-islam-indonesia-logo-png_seeklogo-231955.png' },
+  { id: 8, name: 'Brand 8', url: 'https://seeklogo.com/vector-logo/258396/universitas-negeri-yogyakarta' },
+  { id: 9, name: 'Brand 9', url: 'https://seeklogo.com/vector-logo/191466/universitas-islam-negeri-sunan-kalijaga-yogyakarta' },
+  { id: 10, name: 'Brand 10', url: 'https://images.seeklogo.com/logo-png/9/2/muhammadiyah-logo-png_seeklogo-95839.png' },
+  { id: 11, name: 'Brand 11', url: 'https://images.seeklogo.com/logo-png/29/2/bethesda-logo-png_seeklogo-290695.png' },
+  { id: 12, name: 'Brand 12', url: 'https://images.seeklogo.com/logo-png/35/2/puskesmas-logo-png_seeklogo-359624.png' },
 ];
 
 export const SERVICES: Service[] = [
