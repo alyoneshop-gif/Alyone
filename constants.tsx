@@ -196,9 +196,9 @@ export const CLIENT_LOGOS: ClientLogo[] = [
 ];
 
 export const SERVICES: Service[] = [
-  { id: 'dtf', title: 'Sablon DTF', description: 'Cocok untuk desain full color dan satuan dengan detail tinggi.', icon: <Printer className="w-8 h-8 text-blue-600" /> },
-  { id: 'plastisol', title: 'Sablon Polyflex', description: 'Sablon 1 warna yang solid  dan tersedia efek khusus seperti reflective dan Glow in the dark.', icon: <Palette className="w-8 h-8 text-blue-600" /> },
-  { id: 'rubber', title: 'Sablon Rubber', description: 'Sablon berbasis air yang elastis dan nyaman digunakan.', icon: <Zap className="w-8 h-8 text-blue-600" /> },
+  { id: 'dtf', title: 'Sablon DTF (Digital)', description: 'Solusi sablon satuan dengan warna tak terbatas. Hasil cetak tajam, detail presisi, & pengerjaan kilat.', icon: <Printer className="w-8 h-8 text-blue-600" /> },
+  { id: 'plastisol', title: 'Sablon Plastisol (Manual)', description: 'Standar kualitas distro terbaik. Tinta awet, warna solid/bold, & tekstur premium. Cocok untuk order lusinan.', icon: <Palette className="w-8 h-8 text-blue-600" /> },
+  { id: 'rubber', title: 'Sablon Rubber (Waterbase)', description: 'Tinta menyerap ke serat kain. Hasil elastis, tahan setrika, & sangat lembut. Favorit untuk kaos event & anak.', icon: <Zap className="w-8 h-8 text-blue-600" /> },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
@@ -211,9 +211,9 @@ export const TESTIMONIALS: Testimonial[] = [
 ];
 
 export const ORDER_STEPS: OrderStep[] = [
-  { number: 1, title: 'Konsultasi Desain', description: 'Kirimkan desain Anda melalui WhatsApp atau Email.' },
-  { number: 2, title: 'Pilih Kaos & Teknik', description: 'Pilih bahan kaos dan jenis sablon yang diinginkan.' },
-  { number: 3, title: 'Pembayaran DP', description: 'Lakukan pembayaran uang muka minimal 80%.' },
-  { number: 4, title: 'Proses Produksi', description: 'Tim kami akan mengerjakan pesanan Anda.' },
-  { number: 5, title: 'Pelunasan & Kirim', description: 'Selesaikan pembayaran dan pesanan siap dikirim!' },
+  { number: 1, title: 'Chat Admin', description: 'Konsultasi desain & kebutuhan bajumu gratis via WhatsApp.' },
+  { number: 2, title: 'Deal Spesifikasi', description: 'Pilih jenis bahan & sablon sesuai budget. Kami buatkan mockup visualnya!' },
+  { number: 3, title: 'Produksi', description: 'Cukup DP 80%, pesanan langsung diproses dengan standar QC tinggi.' },
+  { number: 4, title: 'Siap Kirim', description: 'Pelunasan mudah, barang dikirim ke lokasimu dengan aman.' },
+  { number: 5, title: 'Garansi', description: 'Ada cacat? Kami ganti baru! Kepuasanmu prioritas nomor satu.' },
 ];

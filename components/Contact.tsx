@@ -32,9 +32,9 @@ const Contact: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-16">
           <div>
             <span className="text-blue-400 font-bold tracking-wider uppercase text-sm mb-4 block">Hubungi Kami</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-8 leading-tight">Siap Memulai Project Sablon Anda?</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-8 leading-tight">Mau Buat Kaos Sekarang?</h2>
             <p className="text-slate-400 mb-12 max-w-lg leading-relaxed">
-              Konsultasikan kebutuhan sablon Anda secara gratis. Baik itu desain, pemilihan bahan, maupun negosiasi harga untuk partai besar. Tim kami siap merespons dalam waktu kurang dari 24 jam.
+              Konsultasi gratis! Desain, bahan, atau budget, diskusikan saja dengan kami. Tim kami sangat ramah & fast response 24/7.
             </p>
 
             <div className="space-y-8">

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown, Calculator } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const scrollTo = (id: string) => {
@@ -28,21 +28,27 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10 text-white">
         <div className="max-w-3xl">
           <div className="inline-block px-4 py-1.5 rounded-full bg-blue-500/20 backdrop-blur-md border border-white/20 text-blue-200 text-sm font-semibold mb-6 animate-bounce">
-            🔥 Jasa Sablon No. 1 di Indonesia
+            🔥 Pusat Sablon Kaos Custom Terpercaya
           </div>
           <h1 className="text-4xl md:text-7xl font-extrabold leading-[1.1] mb-6">
-            Bawa Desainmu <br />
-            <span className="text-blue-400">Jadi Kenyataan!</span>
+            Bikin Kaos Impianmu <br />
+            <span className="text-blue-400">Jadi Nyata!</span>
           </h1>
           <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl font-light leading-relaxed">
-            AlyoneShop menyediakan jasa sablon kaos kualitas premium. Satuan oke, lusinan siap, partai besar lebih murah. Kualitas distro, pengerjaan cepat, harga bersahabat!
+            Mau bikin kaos satuan atau lusinan? Di sini tempatnya! Kualitas distro, pengerjaan kilat, harga bersahabat. Bergaransi 100% jika hasil tidak sesuai.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
+            <button
+              onClick={() => scrollTo('dtf-calculator')}
+              className="flex items-center justify-center gap-2 bg-white text-blue-900 hover:bg-slate-100 px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl active:scale-95 border-2 border-transparent hover:border-blue-200"
+            >
+              <Calculator size={20} className="text-blue-600" /> Hitung Estimasi Harga
+            </button>
             <button
               onClick={() => scrollTo('order-form')}
               className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-blue-900/20 active:scale-95"
             >
-              Pesan Sekarang <ArrowRight size={20} />
+              Pesan via WhatsApp <ArrowRight size={20} />
             </button>
             <button
               onClick={() => scrollTo('catalog')}

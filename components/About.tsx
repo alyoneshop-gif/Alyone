@@ -22,9 +22,9 @@ const About: React.FC = () => {
 
           <div>
             <span className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-4 block">Tentang AlyoneShop</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">Pakar Sablon Kaos Modern & Berkualitas Tinggi</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">Partner Produksi Kaos Terbaikmu</h2>
             <p className="text-slate-600 mb-8 leading-relaxed">
-              Bermula dari semangat untuk menghadirkan media ekspresi melalui pakaian, AlyoneShop kini telah berkembang menjadi workshop sablon terpercaya yang telah melayani ribuan pelanggan dari berbagai kalangan. Kami tidak hanya sekadar mencetak gambar di atas kain, tapi kami menghidupkan karya seni Anda.
+              Kami hadir untuk membantu mewujudkan ide kreatifmu menjadi kaos berkualitas tinggi. Mulai dari satu pcs hingga ribuan, AlyoneShop siap melayani dengan standar produksi distro. Pilihan tepat untuk clothing brand, komunitas, event, maupun dipakai sendiri.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6">
@@ -34,7 +34,7 @@ const About: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Visi</h4>
-                  <p className="text-sm text-slate-500">Menjadi workshop sablon custom terdepan dengan teknologi printing terkini di Indonesia.</p>
+                  <p className="text-sm text-slate-500">Menjadi vendor sablon terpercaya #1 yang mengutamakan kualitas & kepuasan pelanggan.</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -43,7 +43,7 @@ const About: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Misi</h4>
-                  <p className="text-sm text-slate-500">Memberikan kepuasan maksimal melalui ketepatan warna, durabilitas sablon, dan pelayanan cepat.</p>
+                  <p className="text-sm text-slate-500">Menghadirkan hasil cetak terbaik, presisi, awet, dan layanan yang super ramah.</p>
                 </div>
               </div>
             </div>
