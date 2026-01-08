@@ -22,9 +22,9 @@ const About: React.FC = () => {
 
           <div>
             <span className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-4 block">Tentang AlyoneShop</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">Partner Produksi Kaos Terbaikmu</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">Solusi Cetak Custom Serba Ada</h2>
             <p className="text-slate-600 mb-8 leading-relaxed">
-              Kami hadir untuk membantu mewujudkan ide kreatifmu menjadi kaos berkualitas tinggi. Mulai dari satu pcs hingga ribuan, AlyoneShop siap melayani dengan standar produksi distro. Pilihan tepat untuk clothing brand, komunitas, event, maupun dipakai sendiri.
+              Tak hanya sekadar kaos, kami hadir untuk memenuhi segala kebutuhan branding dan merchandise Anda. Mulai dari apparel (Kaos, Polo, Hoodie) hingga souvenir (Mug, Lanyard, Pin). AlyoneShop siap menjadi partner produksi satu atap untuk personal, komunitas, maupun perusahaan.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6">
@@ -34,7 +34,7 @@ const About: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Visi</h4>
-                  <p className="text-sm text-slate-500">Menjadi vendor sablon terpercaya #1 yang mengutamakan kualitas & kepuasan pelanggan.</p>
+                  <p className="text-sm text-slate-500">Menjadi vendor custom apparel & merchandise terlengkap & terpercaya #1 di Indonesia.</p>
                 </div>
               </div>
               <div className="flex gap-4">

@@ -28,14 +28,14 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10 text-white">
         <div className="max-w-3xl">
           <div className="inline-block px-4 py-1.5 rounded-full bg-blue-500/20 backdrop-blur-md border border-white/20 text-blue-200 text-sm font-semibold mb-6 animate-bounce">
-            🔥 Pusat Sablon Kaos Custom Terpercaya
+            🔥 Pusat Custom Apparel & Merchandise Terlengkap
           </div>
           <h1 className="text-4xl md:text-7xl font-extrabold leading-[1.1] mb-6">
-            Bikin Kaos Impianmu <br />
-            <span className="text-blue-400">Jadi Nyata!</span>
+            Wujudkan Desainmu <br />
+            <span className="text-blue-400">Di Semua Media!</span>
           </h1>
           <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl font-light leading-relaxed">
-            Mau bikin kaos satuan atau lusinan? Di sini tempatnya! Kualitas distro, pengerjaan kilat, harga bersahabat. Bergaransi 100% jika hasil tidak sesuai.
+            Spesialis sablon Kaos, Polo, Hoodie, Mug, hingga Lanyard. Satuan oke, partai besar siap. Kualitas premium, pengerjaan kilat, & bergaransi.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
             <button
