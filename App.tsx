@@ -13,10 +13,22 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import DTFCalculator from './components/DTFCalculator';
+import { useImageProtection } from './hooks/useImageProtection';
 
 const App: React.FC = () => {
+  useImageProtection();
+
+  const handleImageContextMenu = (e: React.MouseEvent) => {
+    if ((e.target as HTMLElement).tagName === 'IMG') {
+      e.preventDefault();
+    }
+  };
+
   return (
-    <div className="relative antialiased text-slate-900 bg-white">
+    <div 
+      className="relative antialiased text-slate-900 bg-white" 
+      onContextMenu={handleImageContextMenu}
+    >
       <Navbar />
       <main>
         <Hero />
